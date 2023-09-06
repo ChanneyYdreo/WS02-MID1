@@ -2,6 +2,31 @@
   font-family: "Fette Unz Fraktur";
   src: url("../fonts/FetteClassicUNZFraktur.ttf");
 }
+@font-face {
+  font-family: "head semi";
+  src: url("../fonts/PalanquinDark-SemiBold.ttf");
+}
+@font-face {
+  font-family: "head reg";
+  src: url("../fonts/PalanquinDark-Regular.ttf");
+}
+
+/**  STYLE 2 */
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #e49c07;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #0e0814;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: #0e0814;
+}
 
 html,
 body {
@@ -13,7 +38,7 @@ header {
   max-width: 80%;
   border-radius: 0 0 20px 20px;
   margin: 0 auto;
-  background-color: #052049;
+  background-color: #0e0814;
   background: center / cover no-repeat url("../images/bacground.jpg");
   padding: 40px;
   text-align: center;
@@ -34,12 +59,13 @@ header img {
   padding: 0 20px;
 }
 img.big-image {
+  box-shadow: 1px 1px 15px 1px #e49c07;
   border-radius: 10px;
   max-width: 100%;
 }
 p.caption {
   color: #d6a239;
-  font-size: 16px;
+  font-size: 17px;
   font-style: italic;
 }
 ul {
@@ -48,20 +74,70 @@ ul {
   margin: 0;
 }
 ol li {
+  font-family: "head reg";
+  font-size: 1.4rem;
   margin-bottom: 7px;
 }
 a {
-  color: red;
   text-decoration: none;
 }
+
+/* about */
+.character-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.character-image-container {
+  flex: 1;
+}
+
+.character-image {
+  width: 400px;
+  height: 500px;
+}
+
+.character-details {
+  flex: 1;
+}
+
+.character-heading {
+  font-family: "head semi";
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.character-description {
+  font-family: "head reg";
+  line-height: 35px;
+  font-size: 1.4rem;
+  text-align: justify;
+  margin-bottom: 1.5rem;
+}
+
+.characteristics-list {
+  font-size: 1.2rem;
+  list-style-type: disc;
+  padding-left: 20px;
+  font-family: "head reg";
+}
+
 /* Friends */
 
 .friends {
+  font-family: "head semi";
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
 }
+.friends h1 {
+  text-align: center;
+  font-size: 2.4rem;
+}
 .friends .row {
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -92,6 +168,8 @@ a {
 
 .card .card-image img {
   filter: grayscale(100%) opacity(60%);
+  max-width: 240px;
+  min-height: 340px;
   max-height: 340px;
   display: block;
   margin-left: auto;
@@ -170,6 +248,7 @@ a {
 }
 
 footer {
+  font-family: "head reg";
   margin-top: 20px;
   padding: 40px 20px;
   background-color: #e49c07;
@@ -178,6 +257,29 @@ footer ul {
   text-align: center;
 }
 footer ul li {
+  font-size: large;
   display: inline-block;
   margin: 0 5px;
+}
+
+@media only screen and (max-width: 800px) {
+  .friends .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .friends a {
+    margin-top: 20px;
+  }
+
+  .character-section {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .character-image {
+    width: 300px;
+    height: 400px;
+  }
 }
