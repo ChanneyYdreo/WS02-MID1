@@ -12,18 +12,18 @@
 }
 
 /**  STYLE 2 */
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #e49c07;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #0e0814;
 }
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
   background-color: #0e0814;
 }
@@ -127,12 +127,14 @@ a {
 /* Friends */
 
 .friends {
+  max-height: 800px;
+  overflow-y: scroll;
   font-family: "head semi";
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
 }
-.friends h1 {
+.friends-heading {
   text-align: center;
   font-size: 2.4rem;
 }
