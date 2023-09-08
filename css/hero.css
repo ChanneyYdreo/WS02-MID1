@@ -3,7 +3,7 @@
   src: url("../fonts/FetteClassicUNZFraktur.ttf");
 }
 @font-face {
-  font-family: "head semi";
+  font-family: "Black Clover Font", sans-serif;
   src: url("../fonts/PalanquinDark-SemiBold.ttf");
 }
 @font-face {
@@ -11,7 +11,7 @@
   src: url("../fonts/PalanquinDark-Regular.ttf");
 }
 
-/**  STYLE 2 */
+/** STYLE 2 */
 *::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -31,30 +31,186 @@
 html,
 body {
   background: linear-gradient(to left, #0e0814 10%, #0e0814 20%, #000000 40%);
-  font-family: Arial, sans-serif;
+  font-family: "Black Clover Font", sans-serif;
   margin: 0;
+  letter-spacing: 0.2rem;
 }
-header {
-  max-width: 80%;
-  border-radius: 0 0 20px 20px;
-  margin: 0 auto;
-  background-color: #0e0814;
-  background: center / cover no-repeat url("../images/bacground.jpg");
-  padding: 40px;
-  text-align: center;
-}
-header h1 {
-  font-family: "Fette Unz Fraktur";
-  font-size: 90px;
+/* header style */
+.header-title {
   color: #e49c07;
+  text-align: center;
+  font-size: 114.35px;
 }
-header img {
-  border-radius: 174px;
-  width: 300px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 1em;
+  min-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.item {
+  display: inline-block;
+  min-height: 400px;
+  width: 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*** Images With Color Fallbacks ***/
+.item:nth-child(1) {
+  background-color: #000000;
+  background-image: url(https://bclover.jp/images/character/character_image02.png);
+  background-position: 40% 10%;
+}
+
+.item:nth-child(2) {
+  background-color: #e49c07;
+  background-image: url(https://bclover.jp/images/character/character_image03.png);
+  background-position: 50% 10%;
+}
+
+.item:nth-child(3) {
+  background-color: #000000;
+  background-image: url(https://bclover.jp/images/character/character_image04.png);
+  background-position: 40% 10%;
+}
+
+.item:nth-child(4) {
+  background-color: #e49c07;
+  background-image: url(https://bclover.jp/images/character/character_image05.png);
+  background-position: 40% 1%;
+}
+
+.item:nth-child(5) {
+  background-color: #000000;
+  background-image: url(https://bclover.jp/images/character/character_image01.png);
+  background-position: center 10px;
+}
+
+.item:nth-child(6) {
+  background-color: #e49c07;
+  background-image: url(https://bclover.jp/images/character/character_image06.png);
+  background-position: center 40px;
+}
+
+.item:nth-child(7) {
+  background-color: #000000;
+  background-image: url(https://bclover.jp/images/character/character_image07.png);
+  background-position: 75% 5%;
+}
+
+.item:nth-child(8) {
+  background-color: #e49c07;
+  background-image: url(https://bclover.jp/images/character/character_image08.png);
+  background-position: 75% 5%;
+}
+
+/*** Grid Set Up ***/
+@supports (display: grid) {
+  .item {
+    width: auto;
+    min-height: 0;
+  }
+
+  .item:nth-child(1) {
+    grid-column: 1 / span 1;
+    grid-row: 1 / 20;
+    -webkit-clip-path: polygon(0 0, 80% 0, 100% 76.5%, 0 100%);
+    clip-path: polygon(0 0, 80% 0, 100% 76.5%, 0 100%);
+    margin-bottom: -93px;
+  }
+
+  .item:nth-child(2) {
+    grid-column: 2 / span 1;
+    grid-row: 1 / 20;
+    -webkit-clip-path: polygon(0 0, 100% 0, 75% 80%, 15.5% 100%);
+    clip-path: polygon(0 0, 100% 0, 75% 80%, 15.5% 100%);
+    margin-left: -21%;
+    margin-right: -5%;
+  }
+
+  .item:nth-child(3) {
+    grid-column: 3 / span 1;
+    grid-row: 1 / 20;
+    -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 53%);
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 53%);
+    margin-left: -28%;
+    margin-bottom: -150px;
+  }
+
+  .item:nth-child(4) {
+    grid-column: 1 / span 1;
+    grid-row: 20 / 40;
+    -webkit-clip-path: polygon(0 22.5%, 100% 0, 100% 77.5%, 0 100%);
+    clip-path: polygon(0 22.5%, 100% 0, 100% 77.5%, 0 100%);
+    margin-top: -5px;
+    margin-bottom: -93px;
+  }
+
+  .item:nth-child(5) {
+    grid-column: 2 / span 1;
+    grid-row: 20 / 40;
+    -webkit-clip-path: polygon(0 13%, 74% 0, 100% 9.25%, 100% 100%, 0 100%);
+    clip-path: polygon(0 13%, 74% 0, 100% 9.25%, 100% 82%, 65% 100%, 0 82%);
+    margin-top: -67px;
+    margin-left: -1%;
+    margin-bottom: -86px;
+  }
+
+  .item:nth-child(6) {
+    grid-column: 3 / span 1;
+    grid-row: 20 / 40;
+    -webkit-clip-path: polygon(0 0, 100% 34.5%, 100% 100%, 0 68.5%);
+    clip-path: polygon(0 0, 100% 34.5%, 100% 100%, 0 68.5%);
+    margin-left: -1%;
+    margin-top: -20px;
+    margin-bottom: -150px;
+  }
+
+  .item:nth-child(7) {
+    grid-column: 1 / 3;
+    grid-row: 40 / 60;
+    -webkit-clip-path: polygon(0 50%, 49% 0, 75% 38%, 34% 100%, 0 100%);
+    clip-path: polygon(0 30%, 49% 0, 100% 97%, 34% 100%, 0 100%);
+    margin-top: -7px;
+  }
+
+  .item:nth-child(8) {
+    grid-column: 2 / span 2;
+    grid-row: 40 / 60;
+    -webkit-clip-path: polygon(0 50%, 57% 0, 100% 48%, 100% 100%, 0 100%);
+    clip-path: polygon(20% 100%, 57% 0, 100% 48%, 100% 100%, 0 100%);
+    margin-left: -15%;
+    margin-top: -7px;
+  }
+}
+
+/*** Floating Text ***/
+.text-box {
+  position: absolute;
+  top: 690px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.text {
+  font-weight: 600;
+  font-family: "Black Clover Font", sans-serif;
+  color: #e49c07;
+  display: block;
+  text-align: center;
+  text-shadow: 0px 3px 15px #000;
+  font-size: 3.5vmax;
 }
 .content {
   color: #e49c07;
-  max-width: 900px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -65,8 +221,7 @@ img.big-image {
 }
 p.caption {
   color: #d6a239;
-  font-size: 17px;
-  font-style: italic;
+  font-size: 29.7px;
 }
 ul {
   list-style: none;
@@ -74,9 +229,9 @@ ul {
   margin: 0;
 }
 ol li {
-  font-family: "head reg";
-  font-size: 1.4rem;
-  margin-bottom: 7px;
+  line-height: 2.4rem;
+  font-family: "Black Clover Font", sans-serif;
+  font-size: 29.7px;
 }
 a {
   text-decoration: none;
@@ -88,33 +243,55 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .character-image-container {
+  position: relative;
   flex: 1;
 }
 
 .character-image {
   width: 400px;
   height: 500px;
+  opacity: 1;
+  transition: bottom 0.4s ease-out;
+  transition: opacity 0.5s linear;
 }
 
+.character-image-container .img-top {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: bottom 0.4s ease-out;
+  transition: opacity 0.5s linear;
+}
+.character-image-container:hover .character-image {
+  transition: bottom 0.4s ease-out;
+  opacity: 0;
+}
+.character-image-container:hover .img-top {
+  opacity: 1;
+  width: 100%;
+  height: 500px;
+}
 .character-details {
   flex: 1;
 }
 
 .character-heading {
-  font-family: "head semi";
-  font-size: 2rem;
+  font-family: "Black Clover Font", sans-serif;
+  font-size: 49.9px;
   margin-bottom: 1rem;
 }
 
 .character-description {
-  font-family: "head reg";
-  line-height: 35px;
-  font-size: 1.4rem;
+  font-family: "Black Clover Font", sans-serif;
+  line-height: 2.4rem;
+  font-size: 29.7px;
   text-align: justify;
-  margin-bottom: 1.5rem;
 }
 
 .characteristics-list {
@@ -127,9 +304,7 @@ a {
 /* Friends */
 
 .friends {
-  max-height: 800px;
-  overflow-y: scroll;
-  font-family: "head semi";
+  font-family: "Black Clover Font", sans-serif;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -185,13 +360,12 @@ a {
 .card .card-content {
   position: absolute;
   bottom: -180px;
-  color: #fff;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
   min-height: 140px;
   width: 100%;
   transition: bottom 0.4s ease-in;
-  box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -207,10 +381,11 @@ a {
 
 .card .card-content h4,
 .card .card-content h5 {
-  font-size: 1.1rem;
+  font-size: 21.8px;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
+  color: #0e0814;
   transition: 0.8s;
   font-weight: 500;
   opacity: 0;
@@ -219,9 +394,9 @@ a {
 }
 
 .card .card-content h5 {
+  font-size: 18.4px;
   transition: 0.5s;
   font-weight: 200;
-  font-size: 0.8rem;
   letter-spacing: 2px;
 }
 
@@ -246,12 +421,12 @@ a {
 }
 
 .card .card-content .social-icons li a span {
-  font-size: 1.3rem;
+  font-size: 25.4px;
 }
 
 footer {
   font-family: "head reg";
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 40px 20px;
   background-color: #e49c07;
 }
@@ -265,6 +440,11 @@ footer ul li {
 }
 
 @media only screen and (max-width: 800px) {
+  .container,
+  .content {
+    height: auto;
+    width: auto;
+  }
   .friends .row {
     display: flex;
     flex-direction: column;
