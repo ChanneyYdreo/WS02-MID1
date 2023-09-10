@@ -47,7 +47,6 @@ body {
   grid-auto-rows: 1fr;
   grid-gap: 1em;
   min-width: 100%;
-  height: 100vh;
   margin: 0 auto;
 }
 
@@ -88,7 +87,7 @@ body {
 .item:nth-child(5) {
   background-color: #000000;
   background-image: url(https://bclover.jp/images/character/character_image01.png);
-  background-position: center 10px;
+  background-position: center -70px;
 }
 
 .item:nth-child(6) {
@@ -105,6 +104,7 @@ body {
 
 .item:nth-child(8) {
   background-color: #e49c07;
+
   background-image: url(https://bclover.jp/images/character/character_image08.png);
   background-position: 75% 5%;
 }
@@ -215,12 +215,13 @@ body {
   padding: 0 20px;
 }
 img.big-image {
-  box-shadow: 1px 1px 15px 1px #e49c07;
+  box-shadow: 0 0 3px #000000, 0 0 3px #000000, 0 0 10px #e49c07,
+    0 0 5px #e49c07, 0 0 5px #e49c07, 0 0 20px #e49c07, 0 0 10px #e49c07;
   border-radius: 10px;
   max-width: 100%;
 }
 p.caption {
-  color: #d6a239;
+  color: #c78708;
   font-size: 29.7px;
 }
 ul {
@@ -228,11 +229,16 @@ ul {
   padding: 0;
   margin: 0;
 }
-ol li {
-  line-height: 2.4rem;
+ul li::before {
+  content: url("./../images/white-clover.png");
+  margin-right: 10px;
+}
+ul li {
+  line-height: 2.9rem;
   font-family: "Black Clover Font", sans-serif;
   font-size: 29.7px;
 }
+
 a {
   text-decoration: none;
 }
@@ -247,11 +253,15 @@ a {
 }
 
 .character-image-container {
+  filter: drop-shadow(5px 5px 5px #5133ac);
   position: relative;
   flex: 1;
 }
 
 .character-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 400px;
   height: 500px;
   opacity: 1;
@@ -289,14 +299,13 @@ a {
 
 .character-description {
   font-family: "Black Clover Font", sans-serif;
-  line-height: 2.4rem;
+  line-height: 2.9rem;
   font-size: 29.7px;
   text-align: justify;
 }
 
 .characteristics-list {
   font-size: 1.2rem;
-  list-style-type: disc;
   padding-left: 20px;
   font-family: "head reg";
 }
@@ -354,7 +363,8 @@ a {
   object-fit: cover;
 }
 .card .card-image img:hover {
-  filter: none;
+  filter: drop-shadow(5px 5px 5px #5133ac);
+  /* filter: none; */
 }
 
 .card .card-content {
@@ -430,15 +440,15 @@ footer {
   padding: 40px 20px;
   background-color: #e49c07;
 }
-footer ul {
+footer ol {
   text-align: center;
 }
-footer ul li {
+footer ol li {
   font-size: large;
   display: inline-block;
   margin: 0 5px;
 }
-
+/* Media queries */
 @media only screen and (max-width: 800px) {
   .container,
   .content {
@@ -463,5 +473,19 @@ footer ul li {
   .character-image {
     width: 300px;
     height: 400px;
+  }
+}
+span:hover {
+  animation: glow 0.8s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 2px #1f0862, 0 0 2px #1f0862, 0 0 4px #2a0e7e,
+      0 0 5px #2a0e7e, 0 0 5px #2a0e7e, 0 0 10px #2a0e7e, 0 0 10px #2a0e7e;
+  }
+
+  to {
+    text-shadow: 0 0 10px #1f0862, 0 0 10px #5133ac, 0 0 10px #5133ac,
+      0 0 20px #5133ac, 0 0 30px #5133ac, 0 0 40px #5133ac, 0 0 60px #5133ac;
   }
 }
