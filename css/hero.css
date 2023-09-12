@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Black Clover Font", sans-serif;
   src: url("../fonts/PalanquinDark-SemiBold.ttf");
@@ -45,7 +44,7 @@ body {
   grid-auto-rows: 1fr;
   grid-gap: 1em;
   min-width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0 auto;
 }
 
@@ -303,7 +302,7 @@ a {
   font-size: 29.7px;
   text-align: justify;
 }
-.character-description::first-letter{
+.character-description::first-letter {
   font-size: 49.9px;
 }
 
