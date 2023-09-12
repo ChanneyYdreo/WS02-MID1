@@ -64,50 +64,50 @@ body {
 /*** Images With Color Fallbacks ***/
 .item:nth-child(1) {
   background-color: #000000;
-  background-image: url(https://bclover.jp/images/character/character_image02.png);
+  background-image: url("./../images/character_image02.png");
   background-position: 40% 10%;
 }
 
 .item:nth-child(2) {
   background-color: #e49c07;
-  background-image: url(https://bclover.jp/images/character/character_image03.png);
+  background-image: url("./../images/character_image03.png");
   background-position: 50% 10%;
 }
 
 .item:nth-child(3) {
   background-color: #000000;
-  background-image: url(https://bclover.jp/images/character/character_image04.png);
+  background-image: url("./../images/character_image04.png");
   background-position: 40% 10%;
 }
 
 .item:nth-child(4) {
   background-color: #e49c07;
-  background-image: url(https://bclover.jp/images/character/character_image05.png);
+  background-image: url("./../images/character_image05.png");
   background-position: 40% 1%;
 }
 
 .item:nth-child(5) {
   background-color: #000000;
-  background-image: url(https://bclover.jp/images/character/character_image01.png);
+  background-image: url("./../images/character_image01.png");
   background-position: center -70px;
 }
 
 .item:nth-child(6) {
   background-color: #e49c07;
-  background-image: url(https://bclover.jp/images/character/character_image06.png);
+  background-image: url("./../images/character_image06.png");
   background-position: center 40px;
 }
 
 .item:nth-child(7) {
   background-color: #000000;
-  background-image: url(https://bclover.jp/images/character/character_image07.png);
+  background-image: url("./../images/character_image07.png");
   background-position: 75% 5%;
 }
 
 .item:nth-child(8) {
   background-color: #e49c07;
 
-  background-image: url(https://bclover.jp/images/character/character_image08.png);
+  background-image: url("./../images/character_image08.png");
   background-position: 75% 5%;
 }
 
@@ -395,7 +395,7 @@ a {
 .card .card-content h5 {
   font-size: 21.8px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #0e0814;
   transition: 0.8s;
@@ -409,7 +409,7 @@ a {
   font-size: 18.4px;
   transition: 0.5s;
   font-weight: 200;
-  letter-spacing: 2px;
+  letter-spacing: 0.2em;
 }
 
 .card .card-content .social-icons {
