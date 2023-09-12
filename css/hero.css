@@ -30,6 +30,7 @@
 
 html,
 body {
+  cursor: url("./../images/sword.png") 25 28, pointer;
   background: linear-gradient(to left, #0e0814 10%, #0e0814 20%, #000000 40%);
   font-family: "Black Clover Font", sans-serif;
   margin: 0;
@@ -241,6 +242,7 @@ ul li {
 }
 
 a {
+  cursor: url("./../images/face.png"), url("./../images/sword.png"), pointer;
   text-decoration: none;
 }
 
@@ -343,7 +345,6 @@ a {
   min-width: 230px;
   max-width: 280px;
   max-height: 340px;
-  cursor: pointer;
   border: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
